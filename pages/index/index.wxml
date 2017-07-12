@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="userLBS">
+    <view class="row">
+    <text class="text">经度：</text>
+      <text class="showValue">{{LBSinfo.latitude}}</text>
+    </view>
+    <view class="row">
+    <text class="text">纬度：</text>
+      <text class="showValue">{{LBSinfo.longitude}}</text>
+    </view>
+    <view class="row">
+    <text class="text">速度：</text>
+      <text class="showValue">{{LBSinfo.speed}}</text>
+    </view>
+    <view class="row">
+    <text class="text">位置的精确度：</text>
+      <text class="showValue">{{LBSinfo.accuracy}}</text>
+    </view>
+        <view class="row">
+    <text class="text">高度：</text>
+      <text class="showValue">{{LBSinfo.altitude}}</text>
+    </view>
+        <view class="row">
+    <text class="text">垂直精度（Android 无法获取，返回 0）：</text>
+      <text class="showValue">{{LBSinfo.verticalAccuracy}}</text>
+    </view>
+        <view class="row">
+    <text class="text">水平精度：</text>
+      <text class="showValue">{{LBSinfo.horizontalAccuracy}}</text>
+    </view>
+  </view>
+    <view class="usermotto">
+    <text class="user-motto">{{bdlbs}}</text>
+  </view>
+    <view class="userBDLBS">
+    <view class="row">
+    <text class="text">经度：</text>
+      <text class="showValue">{{BDLBSinfo.wxMarkerData[0].latitude}}</text>
+    </view>
+    <view class="row">
+    <text class="text">纬度：</text>
+      <text class="showValue">{{BDLBSinfo.wxMarkerData[0].longitude}}</text>
+    </view>
+    <view class="row">
+    <text class="text">Address：</text>
+      <text class="showValue">{{BDLBSinfo.wxMarkerData[0].address}}</text>
+    </view>
+    <view class="row">
+    <text class="text">城市信息 ：</text>
+      <text class="showValue">{{BDLBSinfo.originalData.result.addressComponent.city }}</text>
+    </view>
+  </view>
+</view>
